@@ -31,7 +31,11 @@ function playStream(idVideoTag, stream) {
     video.play();
 }
 
-const peer = new Peer();
+const peer = new Peer({
+    host: 'localhost',
+      port: 9000,
+      path: '/myapp'
+});
 
 peer.on('open', id => {
     $('#my-peer').append(id);
