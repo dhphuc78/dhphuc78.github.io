@@ -1,7 +1,8 @@
 const socket = io('http://webrtcv2020.herokuapp.com/');
-
+$('#div-chat').hide();
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
- 
+  $('#div-chat').show();
+    $('#div-dang-ky').hide();
     arrUserInfo.forEach(user => {
         const { ten, peerId } = user;
         $('#ulUser').append(`<li id="${peerId}">${ten}</li>`);
@@ -21,7 +22,7 @@ socket.on('DANG_KY_THAT_BAT', () => alert('Vui long chon username khac!'));
 
 
 function openStream() {
-    const config = { audio: false, video: true };
+    const config = { audio: true, video: true };
     return navigator.mediaDevices.getUserMedia(config);
 }
 
@@ -32,9 +33,13 @@ function playStream(idVideoTag, stream) {
 }
 
 const peer = new Peer({
-    host: 'localhost',
-      port: 9000,
-      path: '/myapp'
+	key: 'peerjs',
+	host:'peerjsv2020.herokuapp.com',
+	secure: true,
+	port: 443
+
+	
+	
 });
 
 peer.on('open', id => {
