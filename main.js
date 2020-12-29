@@ -1,4 +1,4 @@
-const socket = io('http://webrtcv2020.herokuapp.com/');
+const socket = io('https://webrtcv2020.herokuapp.com/');
 $('#div-chat').hide();
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
   $('#div-chat').show();
