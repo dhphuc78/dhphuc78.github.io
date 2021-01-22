@@ -14,20 +14,25 @@
             </div>
         </header>
         <div id="div-chat">
-            <p id="my-user">ONLINE USER:</p>
+            <h3 id="my-user">ONLINE USER:</h3>
             <ul id="ulUser">
             </ul>
-            <h3 id="my-peer">Your Id: </h3>
-            <video id="localStream" width="500" controls></video>
+             <h3 id="my-peer">Your Id: </h3>
+            <div id="div-video">
+               
+            <video id="localStream" width="550" controls></video>
             
-            <video id="remoteStream" width="500" controls></video>
+            <video id="remoteStream" width="550" controls></video>
             <br /><br />
             <input type="text" id="remoteId" placeholder="Remote ID">
             <button id="btnCall">Call</button>
+            </div>
+            
 
         </div>
         <div id="div-dang-ky">
             <br /><br />
+            <p id="dangky">WebRTC video call</p>
             <div class="input-box">
             <input type="text" id="txtUsername" placeholder="Enter your username">
             </div>
