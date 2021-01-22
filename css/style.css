@@ -3,7 +3,20 @@ body {
 	 background-color: #dddddd;
 
 }
-
+#localStream{
+	padding: 5px 30px;
+}
+#remoteStream{
+	padding: 5px 30px;
+}
+#ulUser{
+	border: 2px solid #cccccc;
+	width: 20%;
+}
+#dangky{
+	font-size: 20px;
+	margin-top: 10px;
+}
 .container {
 	text-align: center;
 	width: 100%;
@@ -13,6 +26,10 @@ body {
 }
 #div-chat{
 	margin-left: 50px;
+
+}
+#div-video{
+	
 }
 #txtUsername{
 	padding: 5px 30px;
